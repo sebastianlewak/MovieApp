@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import logo from "../../assets/owca.png";
 import "../SideBar/SideBar.css";
+import { Link } from "react-router-dom";
 
 export const SideBar = ({ isOpen, onToggle }) => {
   const menuBtnChange = () => {
@@ -16,7 +17,7 @@ export const SideBar = ({ isOpen, onToggle }) => {
       <div className={`sidebar ${isOpen ? "open" : ""}`}>
         <div className="logo-details">
           <div className="logo_name">
-            <img src={logo} alt="profileImg" />
+            <img className="profile-logo" src={logo} alt="profileImg" />
             Owca Movie
           </div>
           <i
@@ -27,50 +28,43 @@ export const SideBar = ({ isOpen, onToggle }) => {
         </div>
         <ul className="nav-list">
           <li>
-            <a href="#">
+            <Link to="/">
               <i className="bx bx-home-smile"></i>
               <span className="links_name">Home</span>
-            </a>
+            </Link>
             <span className="tooltip">Home</span>
           </li>
           <li>
-            <a href="#">
+            <Link to="/movies">
               <i className="bx bx-movie"></i>
-              <span className="links_name">Movies</span>
-            </a>
-            <span className="tooltip">Movies</span>
+              <span className="links_name">Top 100 Movies</span>
+            </Link>
+            <span className="tooltip"> Top 100 Movies</span>
           </li>
           <li>
-            <a href="#">
+            <Link to="/tvshows">
               <i className="bx bx-tv"></i>
-              <span className="links_name">Tv Shows</span>
-            </a>
-            <span className="tooltip">Tv Shows</span>
+              <span className="links_name">Top 100 Tv Shows</span>
+            </Link>
+            <span className="tooltip">Top 100 Tv Shows</span>
           </li>
           <li>
-            <a href="#">
+            <Link to="/towatch">
               <i className="bx bx-time"></i>
               <span className="links_name">To Watch</span>
-            </a>
+            </Link>
             <span className="tooltip">To Watch</span>
           </li>
           <li>
-            <a href="#">
-              <i className="bx bx-heart"></i>
-              <span className="links_name">Favorite</span>
-            </a>
-            <span className="tooltip">Favorite</span>
-          </li>
-          <li>
-            <a href="#">
+            <Link to="/about">
               <i className="bx bx-book"></i>
               <span className="links_name">About Project</span>
-            </a>
+            </Link>
             <span className="tooltip">About Project</span>
           </li>
           <li className="profile">
             <div className="profile-details">
-              <img src={logo} alt="profileImg" />
+              <img className="profile-logo" src={logo} alt="profileImg" />
               <div className="name_info">
                 <div className="name">Owieczka</div>
               </div>

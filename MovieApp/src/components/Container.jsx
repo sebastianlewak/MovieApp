@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.section`
+export const Container = styled.div`
   position: relative;
   top: 0;
   bottom: 0;
@@ -8,4 +8,7 @@ export const Container = styled.section`
   width: ${(props) =>
     props.isOpen ? "calc(100% - 250px)" : "calc(100% - 78px)"};
   height: 100%;
+
+  display: grid;
+  place-items: center;
 `;

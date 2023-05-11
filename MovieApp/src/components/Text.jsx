@@ -16,17 +16,34 @@ export const Text = styled.span`
         letter-spacing: -0.03em;
         line-height: 0.9;
       `,
+
+      subtitle: css`
+      font-size: ${(props) => props.theme.fontsize.subtitle};
+        font-weight: 800;
+        letter-spacing: -0.03em;
+        line-height: 0.9;
+        
+      `,
+      title: css`
+      font-size: ${(props) => props.theme.fontsize.title};
+        font-weight: 800;
+        letter-spacing: -0.03em;
+        line-height: 0.9;
+        
+      `
     }[props.variant];
   }}
 
   ${(props) => {
     return {
+      default: css`
+        color: ${(props) => props.theme.colorpalette["primary-light"]};
+      `,
+
       "primary-dark": css`
         color: ${(props) => props.theme.colorpalette["primary-dark"]};
       `,
-      "primary-light": css`
-        color: ${(props) => props.theme.colorpalette["primary-light"]};
-      `,
+
       "secondary-dark": css`
         color: ${(props) => props.theme.colorpalette["secondary-dark"]};
       `,
@@ -36,6 +53,6 @@ export const Text = styled.span`
       "accent-light": css`
         color: ${(props) => props.theme.colorpalette["accent-light"]};
       `,
-    }[props.color];
+    }[props.color ?? "default"];
   }}
 `;

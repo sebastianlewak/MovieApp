@@ -15,12 +15,14 @@
   background: var(--colorpalette-primary-dark);
   padding: 6px 14px;
   transition: all 0.3s ease;
+  z-index: 100;
 }
+
 .sidebar.open {
   width: 250px;
 }
 
-img {
+.profile-logo {
   height: 30px;
   width: auto;
   margin-right: 10px;
