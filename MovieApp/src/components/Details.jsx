@@ -84,6 +84,8 @@ export const Details = ({ details, trailers }) => {
     return `${min}h ${sec}m`;
   };
 
+ 
+
   return (
     <Container
       url={`https://image.tmdb.org/t/p/original/${details.backdrop_path}`}

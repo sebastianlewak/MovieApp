@@ -37,21 +37,25 @@ export const Cast = ({ actors }) => {
     <Container>
       {actors.slice(0, 6).map((actor) => (
         <Information key={actor.credit_id}>
-          <Img src={`https://image.tmdb.org/t/p/w500/${actor.profile_path}`} />
-
-          <Actor>
-            <Text variant="small" color="accent-dark">
-              Actor:
-            </Text>
-            <Name variant="small">{actor.name}</Name>
-          </Actor>
-
-          <Character>
-            <Text variant="small" color="accent-dark">
-              Character:
-            </Text>
-            <Name variant="small">{actor.character}</Name>
-          </Character>
+          {actor.profile_path && (
+            <>
+              <Img
+                src={`https://image.tmdb.org/t/p/w500/${actor.profile_path}`}
+              />
+              <Actor>
+                <Text variant="small" color="accent-dark">
+                  Actor:
+                </Text>
+                <Name variant="small">{actor.name}</Name>
+              </Actor>
+              <Character>
+                <Text variant="small" color="accent-dark">
+                  Character:
+                </Text>
+                <Name variant="small">{actor.character}</Name>
+              </Character>
+            </>
+          )}
         </Information>
       ))}
     </Container>

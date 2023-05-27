@@ -55,8 +55,6 @@ export const MoreInfo = () => {
   if (!details && !trailers) {
     return <>loading</>;
   }
-
-  console.log(details);
   return (
     <Container>
       <Details details={details} trailers={trailers} />
@@ -65,9 +63,7 @@ export const MoreInfo = () => {
         Overview
       </Text>
 
-      <Text variant="medium">
-        {details.overview}
-      </Text>
+      <Text variant="medium">{details.overview}</Text>
 
       <Text variant="title" color="accent-dark">
         Cast

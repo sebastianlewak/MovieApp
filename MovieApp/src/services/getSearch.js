@@ -5,8 +5,9 @@ export const getSearch = async (input) => {
   const response = await fetch(url);
   const data = await response.json();
 
-  const movies = data.results;
+  const movies = data.results.slice(0, 5);
 
+  console.log(movies)
   return movies;
-};
 
+};
