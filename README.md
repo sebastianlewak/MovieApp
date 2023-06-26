@@ -20,7 +20,7 @@ Node and npm are required to install and run the project.
    ```sh
    git clone https://github.com/sebastianlewak/MovieApp.git
    ```
-2. Install backend NPM packages
+2. Install
    ```sh
    npm install
    ```
