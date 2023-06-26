@@ -1,5 +1,4 @@
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { useState } from "react";
 import { auth } from "../../services/firebase";
 import styled from "styled-components";
 import { Text } from "../Text";
@@ -32,7 +31,7 @@ const Input = styled.input`
   width: 100%;
 `;
 
-const Button = styled.input`
+const Button = styled.button`
   border-radius: 10px;
   background: ${(props) => props.theme.colorpalette["accent-dark"]};
   height: 35px;
@@ -80,6 +79,7 @@ export const LogIn = () => {
         {errors.password && <p>zle haslo</p>}
 
         <Button type="submit">Log in</Button>
+        <Button type="submit">Create account</Button>
       </Form>
     </Container>
   );

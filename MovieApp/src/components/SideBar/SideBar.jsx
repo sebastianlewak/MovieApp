@@ -48,13 +48,13 @@ export const SideBar = ({ isOpen, onToggle }) => {
             </Link>
             <span className="tooltip">Top 100 Tv Shows</span>
           </li>
-          <li>
+          {/* <li>
             <Link to="/towatch">
               <i className="bx bx-time"></i>
               <span className="links_name">To Watch</span>
             </Link>
             <span className="tooltip">To Watch</span>
-          </li>
+          </li> */}
           <li>
             <Link to="/about">
               <i className="bx bx-book"></i>
@@ -62,7 +62,7 @@ export const SideBar = ({ isOpen, onToggle }) => {
             </Link>
             <span className="tooltip">About Project</span>
           </li>
-          <li className="profile">
+          {/* <li className="profile">
             <div className="profile-details">
               <img className="profile-logo" src={logo} alt="profileImg" />
               <div className="name_info">
@@ -70,7 +70,7 @@ export const SideBar = ({ isOpen, onToggle }) => {
               </div>
             </div>
             <i className="bx bx-log-out" id="log_out"></i>
-          </li>
+          </li> */}
         </ul>
       </div>
     </>

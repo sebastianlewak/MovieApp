@@ -28,7 +28,7 @@ export const App = () => {
           <Route path={routes.homepage} element={<HomePage />} />
           <Route path={routes.movies_ranking} element={<MoviesRanking />} />
           <Route path={routes.tvshows_ranking} element={<TvShowsRanking />} />
-          <Route path={routes.towatch} element={<ToWatch />} />
+          {/* <Route path={routes.towatch} element={<ToWatch />} /> */}
           <Route path={routes.moreinfo} element={<MoreInfo />} />
           <Route path={routes.about} element={<About />} />
         </Routes>
