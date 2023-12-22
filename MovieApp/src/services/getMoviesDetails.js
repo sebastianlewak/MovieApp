@@ -1,4 +1,4 @@
-const API_KEY = "17effc3bce0e497819301bb3617efbd9";
+const API_KEY = "baf484c18bf1b9abd7fbe166552c591e";
 
 export const getMoviesDetails = async ({ id }) => {
   const url = `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&language=en-US`;
